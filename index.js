@@ -31,7 +31,7 @@ this.setState((state) =>({isToggleOn:!state.isToggleOn}))
           click below to login 
         </p>
         <button onClick = {this.toggleClick}> Click Me!</button>
-        {this.state.isToggleOn ? 'ON' : 'OFF'}
+        <h1>{this.state.isToggleOn ? 'ON' : 'OFF'}</h1>
 
       </div>
     );
