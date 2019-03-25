@@ -20,8 +20,9 @@ class App extends Component {
       <div>
         <Hello name={this.state.name} />
         <p>
-          Start editing to see some magic happen :)
+          click here to login 
         </p>
+        <button/>
       </div>
     );
   }
