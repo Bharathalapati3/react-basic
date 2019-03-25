@@ -4,15 +4,23 @@ import Hello from './Hello';
 import './style.css';
 
 class App extends Component {
- /* constructor() {
+  constructor() {
     super();
     this.state = {
-      name: 'React'
-    };
-  } */
+      name: 'React',
+      isToggleOn : true
+      };
+    this.toggleClick = this.toggleClick.bind(this);
+  } 
 
-  state = {
-    name: 'Bharath'
+  /*state = {
+    name: 'Bharath',
+    isToggleOn : true
+  }*/
+
+  toggleClick(){
+this.setState({isToggleOn:false})
+
   }
 
   render() {
@@ -20,9 +28,11 @@ class App extends Component {
       <div>
         <Hello name={this.state.name} />
         <p>
-          click here to login 
+          click below to login 
         </p>
-        <button/>
+        <button onClick = {this.toggleClick}> Click Me!</button>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+
       </div>
     );
   }
