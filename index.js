@@ -19,7 +19,7 @@ class App extends Component {
   }*/
 
   toggleClick(){
-this.setState(state =>({isToggleOn:!state.isToggleOn}))
+this.setState((state) =>({isToggleOn:!state.isToggleOn}))
 
   }
 
