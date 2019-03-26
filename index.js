@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'React',
+      name: 'Bharath',
       isToggleOn : true
       };
     this.toggleClick = this.toggleClick.bind(this);
