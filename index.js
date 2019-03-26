@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 
@@ -7,8 +7,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'React'
-    };
+      name: 'React',
+      isToggleOn : true
+      };
+    this.toggleClick = this.toggleClick.bind(this);
+  } 
+
+  /*state = {
+    name: 'Bharath',
+    isToggleOn : true
+  }*/
+
+  toggleClick(){
+this.setState((state) =>({isToggleOn:!state.isToggleOn}))
+
   }
 
   render() {
@@ -16,11 +28,14 @@ class App extends Component {
       <div>
         <Hello name={this.state.name} />
         <p>
-          Start editing to see some magic happen :)
+          click below for Switch 
         </p>
+        <button onClick = {this.toggleClick}> Click Me!</button>
+        <h1>{this.state.isToggleOn ? 'ON' : 'OFF'}</h1>
+
       </div>
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
